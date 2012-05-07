@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry exported="true" kind="lib" path="org.eclipse.swt.gtk.linux.x86_64-3.4.1.v3452b.jar.jar"/>
+	<classpathentry exported="true" kind="lib" path="util-commons-1.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="util.jface-contrib-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.eclipse.jface-3.4.2.M20090107-0800.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.eclipse.jface.databinding-1.2.1.M20080827-0800a.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.eclipse.core.databinding.beans-1.1.1.M20080827-0800a.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.eclipse.core.databinding-1.1.1.M20080827-0800b.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.eclipse.swt-3.4.2.v3452b.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.eclipse.osgi-3.4.3.R34x_v20081215-1030.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.eclipse.core.commands-3.4.0.I20080509-2000.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.eclipse.equinox.common-3.4.0.v20080421-2006.jar"/>
+	<classpathentry exported="true" kind="lib" path="com.ibm.icu-3.8.1.v20080530.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.eclipse.ui.workbench-3.4.2.M20090127-1700.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
