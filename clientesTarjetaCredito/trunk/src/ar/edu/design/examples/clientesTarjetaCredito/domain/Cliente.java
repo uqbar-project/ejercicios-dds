@@ -6,8 +6,4 @@ public interface Cliente {
 	
 	public void pagarVencimiento(int monto);
 
-	public boolean esMoroso();
-
-	public int getDeuda(); 
-	
 }
