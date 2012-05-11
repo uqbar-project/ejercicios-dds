@@ -18,8 +18,10 @@ public class ClienteTest {
 	@Before
 	public void setUp() throws Exception {
 		cliente = new ClientePosta(50);
-		gastatutti = new ClientePosta(150, 30);
-		promosao = new ClientePosta(40, true);
+		gastatutti = new ClientePosta(150);
+		gastatutti.agregarSafeShop(30);
+		promosao = new ClientePosta(40);
+		promosao.agregarPromocion();
 		mixto = new ClientePosta(50);
 		mixto.agregarSafeShop(100);
 		mixto.agregarPromocion();
@@ -70,4 +72,12 @@ public class ClienteTest {
 	public void testComprarSobrepasandoMaximoSafeShopParaMixto() {
 		mixto.comprar(110);
 	}
+
+	@Test(expected = BusinessException.class)
+	public void testClienteConPromocionYDespuesSafeShop() {
+		ClientePosta badCustomer = new ClientePosta(50);
+		badCustomer.agregarPromocion();
+		badCustomer.agregarSafeShop(88);
+	}
+
 }

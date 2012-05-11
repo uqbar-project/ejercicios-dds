@@ -6,4 +6,6 @@ public interface Cliente {
 	
 	public void pagarVencimiento(int monto);
 
+	public void agregarPuntos(int puntos);
+
 }

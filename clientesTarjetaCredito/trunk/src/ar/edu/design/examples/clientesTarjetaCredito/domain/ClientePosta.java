@@ -1,14 +1,15 @@
 package ar.edu.design.examples.clientesTarjetaCredito.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import ar.edu.design.examples.clientesTarjetaCredito.exceptions.BusinessException;
 
 public class ClientePosta implements Cliente {
 
 	private int deuda;
+	private List<CondicionComercial> condicionesCompra;
 	private int puntos;
-	private boolean adheridoPromocion;
-	private boolean adheridoSafeShop;
-	private int montoMaximoSafeShop;
 	
 	/**
 	 * METODOS ORIGINALES DEL REQUERIMIENTO
@@ -16,58 +17,48 @@ public class ClientePosta implements Cliente {
 	 */
 	@Override
 	public void comprar(int monto) {
-		if (adheridoSafeShop && monto > montoMaximoSafeShop) {
-			throw new BusinessException("El monto " + monto + " supera " + montoMaximoSafeShop + " que es el monto máximo");
+		for (CondicionComercial condicion : condicionesCompra) {
+			condicion.comprar(monto, this);
 		}
 		deuda += monto;
-		if (adheridoPromocion && monto > 50) {
-			puntos += 15;
-		}
 	}
 	
 	@Override
 	public void pagarVencimiento(int monto) {
 		deuda -= monto;
-		
 	}
 	
 	/**
 	 * METODOS QUE SURGIERON POR LOS TESTS
 	 */
 	public ClientePosta() {
-		deuda = 0;
+		initialize();
 	}
 	
 	public ClientePosta(int montoInicial) {
+		initialize();
 		deuda = montoInicial;
 	}
 	
-	public ClientePosta(int montoInicial, int montoMaximoSafeShop) {
-		deuda = montoInicial;
-		this.agregarSafeShop(montoMaximoSafeShop);
+	public void initialize() {
+		this.deuda = 0;
+		this.puntos = 0;
+		this.condicionesCompra = new ArrayList<CondicionComercial>();
 	}
 	
 	public void agregarSafeShop(int montoMaximoSafeShop) {
-		this.adheridoSafeShop = true;
-		this.montoMaximoSafeShop = montoMaximoSafeShop;
+		if (!this.condicionesCompra.isEmpty()) {
+			throw new BusinessException("No puede agregar safe shop a clientes con otras condiciones");
+		}
+		this.condicionesCompra.add(new SafeShop(montoMaximoSafeShop));
 	}
 
 	public void agregarPromocion() {
-		this.adheridoPromocion = true;
+		this.condicionesCompra.add(new Promocion());
 	}
 	
-	public boolean isAdheridoSafeShop() {
-		return adheridoSafeShop;
-	}
-
 	public int getPuntos() {
 		return puntos;
-	}
-
-	public ClientePosta(int montoInicial, boolean adhierePromocion) {
-		deuda = montoInicial;
-		adheridoPromocion = adhierePromocion;
-		puntos = 0;
 	}
 
 	public boolean esMoroso() {
@@ -76,6 +67,10 @@ public class ClientePosta implements Cliente {
 
 	public int getDeuda() {
 		return deuda;
+	}
+	
+	public void agregarPuntos(int puntos) {
+		this.puntos += puntos;
 	}
 
 }
