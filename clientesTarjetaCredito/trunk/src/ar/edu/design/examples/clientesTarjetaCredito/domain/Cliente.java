@@ -8,4 +8,10 @@ public interface Cliente {
 
 	public void agregarPuntos(int puntos);
 
+	public int getDeuda();
+
+	public boolean esMoroso();
+
+	public int getPuntos();
+	
 }

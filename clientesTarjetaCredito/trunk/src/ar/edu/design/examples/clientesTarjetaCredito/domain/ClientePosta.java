@@ -1,14 +1,9 @@
 package ar.edu.design.examples.clientesTarjetaCredito.domain;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import ar.edu.design.examples.clientesTarjetaCredito.exceptions.BusinessException;
 
 public class ClientePosta implements Cliente {
 
 	private int deuda;
-	private List<CondicionComercial> condicionesCompra;
 	private int puntos;
 	
 	/**
@@ -17,9 +12,6 @@ public class ClientePosta implements Cliente {
 	 */
 	@Override
 	public void comprar(int monto) {
-		for (CondicionComercial condicion : condicionesCompra) {
-			condicion.comprar(monto, this);
-		}
 		deuda += monto;
 	}
 	
@@ -43,18 +35,6 @@ public class ClientePosta implements Cliente {
 	public void initialize() {
 		this.deuda = 0;
 		this.puntos = 0;
-		this.condicionesCompra = new ArrayList<CondicionComercial>();
-	}
-	
-	public void agregarSafeShop(int montoMaximoSafeShop) {
-		if (!this.condicionesCompra.isEmpty()) {
-			throw new BusinessException("No puede agregar safe shop a clientes con otras condiciones");
-		}
-		this.condicionesCompra.add(new SafeShop(montoMaximoSafeShop));
-	}
-
-	public void agregarPromocion() {
-		this.condicionesCompra.add(new Promocion());
 	}
 	
 	public int getPuntos() {
