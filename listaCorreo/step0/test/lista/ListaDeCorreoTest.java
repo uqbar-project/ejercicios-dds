@@ -94,7 +94,7 @@ public class ListaDeCorreoTest {
 
     listaTadpCerrada.enviarMail("Mi segundo mail", "Este es otro body", maru);
 
-    assertEquals("Este es otro body\nLa presente lista no se responsabiliza por da�os y prejuicios",
+    assertEquals("Este es otro body\nLa presente lista no se responsabiliza por daños y prejuicios",
         impostorMailSender.getMailsEnviados().get(0).getBody());
   }
 

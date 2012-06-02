@@ -2,8 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="mockito-all-1.8.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
-	<classpathentry sourcepath="/home/franco/.gradle/caches/artifacts-8/filestore/junit/junit/4.8/source/abe171e0fc1242d1fe10e8dc43bce031e3f65560/junit-4.8-sources.jar" kind="lib" path="/home/franco/.gradle/caches/artifacts-8/filestore/junit/junit/4.8/jar/4150c00c5706306ef0f8f1410e70c8ff12757922/junit-4.8.jar" exported="true"/>
-	<classpathentry sourcepath="/home/franco/.gradle/caches/artifacts-8/filestore/org.mockito/mockito-all/1.8.1/source/b6163b2279da5d36d6ea49d84409b1fc9e572bc2/mockito-all-1.8.1-sources.jar" kind="lib" path="/home/franco/.gradle/caches/artifacts-8/filestore/org.mockito/mockito-all/1.8.1/jar/dd816833ca84acf77ddc9385867d71835e8ca91c/mockito-all-1.8.1.jar" exported="true"/>
 </classpath>
