@@ -1,0 +1,7 @@
+#Fri Jun 15 16:38:43 GMT-03:00 2012
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.423825136/PATH/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.423825136/PATH/operation=replace
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.423825136/PATH/value=C\:\\MinGW\\include;C\:\\MinGW\\include\\cutest-1.5;C\:\\MinGW\\bin;C\:\\MinGW\\msys\\1.0\\bin;C\:/Program Files/Java/jdk1.6.0_18/bin/../jre/bin/client;C\:/Program Files/Java/jdk1.6.0_18/bin/../jre/bin;C\:/Program Files/Java/jdk1.6.0_18/bin/../jre/lib/i386;C\:\\Windows\\system32;C\:\\Windows;C\:\\Windows\\System32\\Wbem;C\:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C\:\\Program Files\\Broadcom\\Broadcom 802.11\\Driver;C\:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C\:\\Program Files\\WIDCOMM\\Bluetooth Software\\;C\:\\Program Files\\Haskell Platform\\2009.2.0.2\\bin;C\:\\Program Files\\Haskell Platform\\2009.2.0.2\\extralibs\\bin;C\:\\Program Files\\Haskell\\bin;C\:\\Program Files\\Java\\jdk1.6.0_18\\bin;C\:\\Program Files\\Maven\\apache-maven-2.2.1\\bin;C\:\\Program Files\\pl\\bin;C\:\\msys\\1.0\\bin;C\:\\mingw\\bin;;C\:\\Eclipse\\eclipse-cpp-indigo-SR1-incubation-win32\\eclipse
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.423825136/append=true
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.423825136/appendContributed=true
