@@ -1,0 +1,13 @@
+Introducción
+============
+
+Este proyecto contiene las pruebas e implementación del problema de pilas y colas, empleando exclusivamente value objets
+
+
+Construcción del proyecto
+=========================
+El projecto cuenta con un .project, para poder importalo directamente en Eclipse. 
+
+Cuenta  también con pom.xml para los alumnos que ya estén familiarizados con maven. 
+  
+   
