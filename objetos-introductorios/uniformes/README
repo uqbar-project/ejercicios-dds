@@ -1,0 +1,24 @@
+Introducción
+============
+
+Este proyecto contiene los casos de prueba para la segunda parte del ejercicio de Uniformes. 
+
+
+Consideraciones
+===============
+
+Este proyecto no contiene la implementación del modelo, por lo que los tests evidentemente fallarán si son ejecutados. Es tarea del alumno
+finalizar el fixture de dichos tests, proporcionando las instancias de las clases que desarrollará.
+
+A modo de esqueleto de la solución, se propocionan las interfaces para los objetos que son probados en los tests. Estas son provistas como 
+*interfaces* Java, pero esta decisión es arbitraria, para permitir la compilación de los test, el alumno puede optar por convertirlas en 
+clases concretas o clases abstractas si lo considera apropiado.
+
+
+Construcción del proyecto
+=========================
+El projecto cuenta con un .project, para poder importalo directamente en Eclipse. 
+
+Cuenta  también con pom.xml para los alumnos que ya estén familiarizados con maven. 
+  
+   
