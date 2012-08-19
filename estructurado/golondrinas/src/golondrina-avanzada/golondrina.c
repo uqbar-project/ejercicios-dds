@@ -1,5 +1,5 @@
 #include "golondrina.h"
-#include "../minilib/instance.h"
+#include <src/minilib/instance.h>
 
 adt_define(Golondrina, {
    int energia;

@@ -1,13 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 
-#ifdef AVANZADO
-  #include  "../../src/golondrina-avanzada/golondrina.h"
-  #define MODO "avanzado"
-#else
-  #include "../../src/golondrina-basica/golondrina.h"
-  #define MODO "basico"
-#endif
+#include  "../../src/golondrina-avanzada/golondrina.h"
 
 void pepita_gana_energia_cuando_come() {
   Golondrina * pepita = golondrina_new_con_energia(2);
@@ -40,7 +34,7 @@ int main() {
   pepita_pierde_energia_cuando_vuela();
   pepita_esta_cansada_si_tiene_poca_energia();
   pepita_no_esta_cansada_si_tiene_mucha_energia();
-  puts("Pasó Test " MODO " de Golondrina" );
+  puts("Pasó Test de Golondrina" );
   return 0;
 }
 

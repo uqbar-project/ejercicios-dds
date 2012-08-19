@@ -3,6 +3,7 @@
 	<name>golondrinas</name>
 	<comment></comment>
 	<projects>
+		<project>minilib</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

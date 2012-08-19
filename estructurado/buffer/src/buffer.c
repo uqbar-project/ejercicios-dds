@@ -6,19 +6,19 @@
  */
 
 #include "buffer.h"
-#include <malloc.h>
 #include <assert.h>
 #include <string.h>
+#include <src/minilib/instance.h>
 
 static void _buffer_expand(Buffer*self, int required_space);
 static int _buffer_optimal_new_size(Buffer*self, int required_space);
 static int _buffer_available_space(Buffer*self);
 
 Buffer * buffer_new(int max_size) {
-  Buffer * self = (Buffer*) malloc(sizeof(Buffer));
+  Buffer * self = instance_new(Buffer);
   self->current_size = 0;
   self->max_size = max_size;
-  self->content = (char*) malloc(sizeof(char) * max_size);
+  self->content = instance_new_array(char, max_size);
   return self;
 }
 
@@ -49,10 +49,9 @@ int buffer_current_size(Buffer * self ) {
 
 void buffer_delete(Buffer ** self) {
   if( (*self)->content != NULL ) {
-    free((*self)->content);
+    instance_delete((*self)->content);
   }
-  free(*self);
-  *self = NULL;
+  instance_delete(*self);
 }
 
 
@@ -61,12 +60,10 @@ static void _buffer_expand(Buffer*self, int required_space) {
     int new_size = _buffer_optimal_new_size(self, required_space);
     self->max_size = new_size;
 
-    char * new_content = (char*) malloc(sizeof(char)* new_size);
+    char * new_content =  instance_new_array(char, new_size);
     memcpy(new_content, self->content, self->current_size);
 
-    free(self->content);
-
-    self->content = new_content;
+    instance_delete_and_set(self->content, new_content);
   }
 }
 

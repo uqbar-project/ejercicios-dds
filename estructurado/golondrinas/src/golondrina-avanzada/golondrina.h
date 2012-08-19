@@ -1,8 +1,8 @@
 #ifndef GOLONDRINA_H_
 #define GOLONDRINA_H_
 
-#include "../minilib/adt.h"
-#include "../minilib/types.h"
+#include <src/minilib/adt.h>
+#include <src/minilib/types.h>
 
 adt_declare(Golondrina);
 
